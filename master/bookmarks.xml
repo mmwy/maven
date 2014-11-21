@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookmarks>
+   <site url="https://dl-ssl.google.com/android/eclipse/" selected="true" name="Android Update Site"/>
+   
+   <site url="http://update.atlassian.com/atlassian-eclipse-plugin/rest/e3.6"            selected="true"  name="Atlassian Connector for Eclipse 3.2.x"/>
+   <!--
+   <site url="http://apache.org/dist/geronimo/eclipse/updates/"                          selected="false" name="Apache Geronimo WTP Server Adapters"/>
+   <site url="http://eclipse-jetty.sourceforge.net/update/"                              selected="false" name="Eclipse Jetty Launcher Site"/>
+   <site url="http://www.webtide.com/eclipse"                                            selected="false" name="Jetty Generic Server Adaptor"/>
+   <site url="http://public.dhe.ibm.com/software/websphere/wasce/updates/"               selected="false" name="IBM WebSphere Application Server Community Edition"/>
+   -->
+   <site url="http://download.jboss.org/jbosstools/updates/stable/kepler/"               selected="true"  name="JBoss Tools 4.1 (Kepler)"/>
+   <site url="http://download.jboss.org/jbosstools/updates/kepler/"                      selected="true"  name="JBoss Tools Target Platform - Kepler"/>
+   <site url="http://download.oracle.com/otn_software/oepe/kepler/wtp/"                  selected="true"  name="Oracle Enterprise Pack for Eclipse (WTP)"/>
+   <site url="http://download.oracle.com/otn_software/oepe/12.1.1.2.2/kepler/repository" selected="true"  name="Oracle Enterprise Pack for Eclipse Repository"/>
+   
+   <site url="http://download.eclipse.org/technology/subversive/1.1/update-site/"                      selected="true" name="Subversive - SVN Team Provider 1.0.0"/>
+   <site url="http://community.polarion.com/projects/subversive/download/integrations/update-site/"    selected="true" name="Subversive Integration for the M2Eclipse"/>
+   <site url="http://community.polarion.com/projects/subversive/download/eclipse/3.0/update-site/"     selected="true" name="SVN connectors for the Eclipse Subversive"/>
+   <site url="http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-egit/0.14.0/N/0.14.0.201207041402/"       selected="true" name="Maven SCM Handler for EGit"/>
+   <site url="http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-subversive/0.13.0/N/0.13.0.201302121311/" selected="true" name="Maven SCM Handler for Subversive"/>
+
+   <site url="http://www.apache.org/dist/ant/ivyde/updatesite" selected="true" name="Apache IvyDE Repository"/>
+   <site url="http://vaadin.com/eclipse/experimental"          selected="true" name="Vaadin Plug-in for Eclipse"/>
+   
+   <site url="http://propedit.sourceforge.jp/eclipse/updates/" selected="true" name="PropertiesEditor Update Site"/>
+   
+   <site url="http://download.eclipse.org/windowbuilder/WB/release/R201306261200/4.3/" selected="true" name="WindowBuilder Pro Eclipse"/>
+</bookmarks>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC
+    "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
+    "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+<module name="Checker">
+    <property name="charset" value="UTF-8" />
+    <!-- 重复代码的检查，超过8行就认为重复，UTF-8格式 本检查一定要放在"TreeWalker"节点前，否则在Checkclipse中会无法使用。(在ant下可以) -->
+	<!--
+    <module name="StrictDuplicateCode">
+        <property name="min" value="8" />
+    </module>
+	-->
+    <!-- 不允许tab字符 -->
+    <module name="FileTabCharacter" />
+
+    <module name="TreeWalker">
+        <property name="cacheFile" value="target/cachefile" />
+        <property name="tabWidth" value="4" />
+        <!-- javadoc的检查 -->
+        <!-- 检查所有的interface和class -->
+		<!--
+        <module name="JavadocType" />
+		-->
+
+        <!-- 命名方面的检查，它们都使用了Sun官方定的规则。 -->
+        <!-- 局部的final变量，包括catch中的参数的检查 -->
+        <!-- ^[a-z][a-zA-Z0-9]*$ -->
+        <module name="LocalFinalVariableName" />
+        <!-- 局部的非final型的变量，包括catch中的参数的检查 -->
+        <!-- ^[a-z][a-zA-Z0-9]*$ -->
+        <module name="LocalVariableName" />
+        <!-- 包名的检查（只允许小写字母） -->
+        <module name="PackageName">
+            <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$" />
+        </module>
+        <!-- 仅仅是static型的变量（不包括static final型）的检查 -->
+        <!-- ^[a-z][a-zA-Z0-9]*$ -->
+        <module name="StaticVariableName" />
+        <!-- 类型(Class或Interface)名的检查 -->
+        <module name="TypeName" />
+        <!-- 非static型变量的检查 -->
+        <module name="MemberName" />
+        <!-- 方法名的检查 -->
+        <module name="MethodName" />
+        <!-- 方法的参数名 -->
+        <module name="ParameterName " />
+        <!-- 常量名的检查 -->
+        <module name="ConstantName">
+            <property name="format" value="^[A-Za-z][A-Za-z0-9]*(_[A-Za-z0-9]+)*$" />
+        </module>
+
+        <!-- import方面的检查 -->
+        <!-- import中避免星号"*" -->
+        <module name="AvoidStarImport" />
+        <!-- 没用的import检查，比如：1.没有被用到2.重复的3.import java.lang的4.import与该类在同一个package的 -->
+        <module name="UnusedImports" />
+
+        <!-- 关键字 -->
+        <!--每个关键字都有正确的出现顺序。比如 public static final XXX 是对一个常量的声明。如果使用 static public final 就是错误的-->
+        <module name="ModifierOrder" />
+        <!-- 多余的关键字 -->
+        <module name="RedundantModifier" />
+
+        <!-- 对区域的检查 -->
+        <!-- 不能出现空白区域 -->
+        <module name="EmptyBlock" />
+        <!-- 所有区域都要使用大括号。 -->
+        <module name="NeedBraces" />
+        <!-- 多余的括号 -->
+        <module name="AvoidNestedBlocks">
+            <property name="allowInSwitchCase" value="true" />
+        </module>
+
+        <!-- 编码方面的检查 -->
+        <!-- 不许出现空语句 -->
+        <module name="EmptyStatement" />
+        <!-- 绝对不能容忍魔法数 -->
+        <module name="MagicNumber">
+            <property name="tokens" value="NUM_DOUBLE, NUM_INT" />
+        </module>
+        <!-- 循环控制变量不能被修改 -->
+        <module name="ModifiedControlVariable" />
+        <!-- 多余的throw -->
+        <module name="RedundantThrows" />
+        <!-- 不许使用未被简化的条件表达式 -->
+        <module name="SimplifyBooleanExpression" />
+        <!-- 不许使用未被简化的布尔返回值 -->
+        <module name="SimplifyBooleanReturn" />
+        <!-- String的比较不能用!= 和 == -->
+        <module name="StringLiteralEquality" />
+        <!-- 确保一个类有package声明 -->
+        <module name="PackageDeclaration" />
+        <!-- 不必要的圆括号 -->
+        <module name="UnnecessaryParentheses" />
+
+        <!-- 杂项 -->
+        <!-- 对注释中的TODO告警 -->
+        <module name="TodoComment">
+            <property name="format" value="WARNING" />
+        </module>
+        <!-- 禁止使用System.out.println -->
+        <module name="Regexp">
+		    <property name="format" value="System\.(out)|(err)\.print(ln)?\("/>
+            <property name="illegalPattern" value="true" />
+        </module>
+        <!-- 禁止使用e.printStackTrace() -->
+        <module name="Regexp">
+		    <property name="format" value="\.printStackTrace\("/>
+            <property name="illegalPattern" value="true" />
+        </module>
+        <!-- 检查数组类型的定义是String[] args，而不是String args[] -->
+        <module name="ArrayTypeStyle" />
+    </module>
+</module>
